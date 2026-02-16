@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ultimate Password Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="theme-toggle" onclick="toggleTheme()">🌙</div>
+
+<div class="container">
+    <h1>🔐 Ultimate Password Generator</h1>
+
+    <form method="POST">
+        <input type="text" name="password" placeholder="Enter your password">
+        <button type="submit">Generate From Input</button>
+        <button type="submit" name="random">Generate Random</button>
+    </form>
+
+    {% if strong_password %}
+    <div class="result">
+        <p>Generated Password:</p>
+        <h2 id="generatedPassword">{{ strong_password }}</h2>
+        <button class="copy-btn" onclick="copyPassword()">Copy</button>
+
+        <div class="strength">
+            <div id="strengthBar"></div>
+        </div>
+        <p id="strengthText"></p>
+    </div>
+    {% endif %}
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
