@@ -29,11 +29,28 @@ This app generates strong passwords and provides a clean, responsive user interf
 
 ## 📂 Project Structure
 password-generator/
+
 │
+
+
 ├── app.py
+
+
 ├── requirements.txt
+
+
 ├── templates/
+
+
 │ └── index.html
+
+
 ├── static/
+
+
+
 │ ├── style.css
+
+
 │ └── script.js
+
